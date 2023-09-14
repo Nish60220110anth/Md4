@@ -25,7 +25,7 @@ jobs:
     - name: Set up Rust
       uses: actions-rust-lang/setup-rust-toolchain@v1
       with:
-        rust-version: '1.72.0'
+        components: cache
 
     - name: Build Backend
       run: cd backend && cargo build --release && cp target/release/md4 ./
@@ -34,4 +34,4 @@ jobs:
       run: go build -v ./...
 
     - name: Test Frontends
-      run: go test -v ./...
+      run: go test .
