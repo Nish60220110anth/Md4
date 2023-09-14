@@ -13,6 +13,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v3
 
@@ -21,8 +22,16 @@ jobs:
       with:
         go-version: '1.21'
 
-    - name: Build
+    - name: Set up Rust
+      uses: actions/setup-rust@v2
+      with:
+        rust-version: '1.72.0'
+        
+    - name: Build Backend
+      run: cd backend && cargo build --release && cp target/release/md4 ./
+
+    - name: Build Frontend
       run: go build -v ./...
 
-    - name: Test
+    - name: Test Frontends
       run: go test -v ./...
