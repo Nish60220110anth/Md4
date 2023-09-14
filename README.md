@@ -16,7 +16,7 @@
 > - Printing success or failure message
 > - Printing Other Statistics like input size, output size, digest values, etc..,
 
-## How to run 
+## How to run (without make)
 1. Clone the repository
 2. Go to the cloned directory
 3. Go to the backend directory
@@ -40,6 +40,18 @@ go build
 9. If you want to run the tests, then run the following command
 ```bash
 go test .
+```
+
+## How to run (with make)
+1. Clone the repository
+2. Go to the cloned directory
+3. Run the following command to build the backend and frontend
+```bash
+make buildall
+```
+4. Run the following command to run the frontend (can also build frontend and backend)
+```bash
+make runall
 ```
 
 ## Limitations
