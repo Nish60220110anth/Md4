@@ -23,10 +23,10 @@ jobs:
         go-version: '1.21'
 
     - name: Set up Rust
-      uses: actions/setup-rust@v2
+      uses: actions/setup-rust-action@v2
       with:
         rust-version: '1.72.0'
-        
+
     - name: Build Backend
       run: cd backend && cargo build --release && cp target/release/md4 ./
 
