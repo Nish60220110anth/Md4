@@ -1,0 +1,13 @@
+Input file name: input.txt
+Output file name: output.txt
+Output file name for generated digest: output_gen.txt
+Input line count: 6
+Pairwise input-output
+Input		Output
+nishanth	2940514c4f5205eaf91133024970c928
+arun	9ff37aeab33610230bf15b48ba26424b
+nice	7e33c35396729ccebfb15db15e7effc1
+shiva	2dd3db25a5ff334703c19a2732939027
+krishna	c1c244e653808d9bfc31b72ec84a6915
+gurudev	9230700e07ebe61f3ee451eb7a5e8503
+Other: openssl used to get the correct value of md4 digest for inputs
