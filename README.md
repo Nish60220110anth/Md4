@@ -16,6 +16,32 @@
 > - Printing success or failure message
 > - Printing Other Statistics like input size, output size, digest values, etc..,
 
+## How to run 
+1. Clone the repository
+2. Go to the cloned directory
+3. Go to the backend directory
+4. Run the following command to build the backend
+```bash
+cargo build --release
+```
+5. copy the backend binary to the frontend directory
+```bash
+cp target/release/md4  .
+```
+6. Go to the frontend directory
+7. Run the following command to build the frontend
+```bash
+go build
+```
+8. Run the following command to run the frontend
+```bash
+./frontend <input_file> <output_file>
+```
+9. If you want to run the tests, then run the following command
+```bash
+go test .
+```
+
 ## Limitations
 1. Tested only on linux
 2. Input file size should be less than 1GB (This is because of the limitation of the frontend. Frontend uses
